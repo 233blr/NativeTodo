@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
+import Header from './components/Header';
 
 export default function App() {
   const [todos, setTodo] = useState([
@@ -13,20 +14,22 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <StatusBar style='light' />
       <View>
-        {/* Header */}
+        <Header />
         <View style={styles.content}>
           {/* To form */}
           <View style={styles.list}>
             {/*  */}
             <FlatList
               data={todos}
-              renderItem={({ item }) => (<Text>{item.text}</Text>)}
+              renderItem={({ item }) => (
+                <Text>{item.text}</Text>
+              )}
             />
           </View>
         </View>
       </View>
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -34,7 +37,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FCFCFC',
   },
   content: {
     padding: 40,
