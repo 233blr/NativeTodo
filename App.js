@@ -7,11 +7,11 @@ import AddTodo from './components/AddToto';
 
 export default function App() {
   const [todos, setTodos] = useState([
-    { id: 0, importance: 0, text: 'Bue coffe', date: '11 Dec 2021 15:05', },
-    { id: 1, importance: 2, text: 'Learn JS', date: '16 Dec 2021 16:00', },
-    { id: 2, importance: 3, text: 'Buy milk', date: '23 Dec 2021 20:45', },
-    { id: 3, importance: 3, text: 'Buy tea', date: '24 Dec 2021 20:45', },
-    { id: 4, importance: 3, text: 'Buy bye', date: '25 Dec 2021 20:45', },
+    { id: 0, text: 'Bue coffe', date: '11 Dec 2021 15:05', },
+    { id: 1, text: 'Learn JS', date: '16 Dec 2021 16:00', },
+    { id: 2, text: 'Buy milk', date: '23 Dec 2021 19:45', },
+    { id: 3, text: 'Buy tea', date: '24 Dec 2021 19:50', },
+    { id: 4, text: 'Buy bye', date: '25 Dec 2021 20:45', },
   ]);
 
   const deleteHandler = (id) => {
