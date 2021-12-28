@@ -7,11 +7,11 @@ import AddTodo from './components/AddToto';
 
 export default function App() {
   const [todos, setTodos] = useState([
-    { id: 0, importance: 0, text: 'Bue coffe', date: '11 Dec 2021 15:05', status: true, },
-    { id: 1, importance: 2, text: 'Learn JS', date: '16 Dec 2021 16:00', status: false, },
-    { id: 2, importance: 3, text: 'Buy milk', date: '30 Dec 2021 20:45', status: true, },
-    { id: 3, importance: 3, text: 'Buy tea', date: '30 Dec 2021 20:45', status: true, },
-    { id: 4, importance: 3, text: 'Buy bye', date: '30 Dec 2021 20:45', status: true, },
+    { id: 0, importance: 0, text: 'Bue coffe', date: '11 Dec 2021 15:05', },
+    { id: 1, importance: 2, text: 'Learn JS', date: '16 Dec 2021 16:00', },
+    { id: 2, importance: 3, text: 'Buy milk', date: '23 Dec 2021 20:45', },
+    { id: 3, importance: 3, text: 'Buy tea', date: '24 Dec 2021 20:45', },
+    { id: 4, importance: 3, text: 'Buy bye', date: '25 Dec 2021 20:45', },
   ]);
 
   const deleteHandler = (id) => {
@@ -29,7 +29,6 @@ export default function App() {
             importance: 0,
             text: text,
             date: new Date().toUTCString().slice(5, -7),
-            status: false,
           },
           ...prevTodos,
         ]);
@@ -39,19 +38,13 @@ export default function App() {
     }
   }
 
-  // colors
-  // #FCFCFC
-  // #83FFE6
-  // #FF5F5F
-  // #2C2C2C
-
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
         <StatusBar style='light' />
         <View>
           <Header />
-          <View style={styles.content}>
+          <View>
             <AddTodo addTodoHandler={addTodoHandler} />
             <View style={styles.list}>
               <FlatList
@@ -77,7 +70,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FCFCFC',
   },
-  // content: {},
   list: {
     marginTop: 30,
   },
