@@ -11,6 +11,7 @@ export default function AddTodo({ addTodoHandler }) {
   return (
     <View>
       <TextInput
+        value={text}
         style={styles.input}
         placeholder='new text...'
         onChangeText={chengeHandler}
